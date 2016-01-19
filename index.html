@@ -50,9 +50,11 @@ manual repair patterns of buffer overﬂow repairs to guide both the manual and 
 You can find all their source code <a href="https://github.com/ytyxbgl/Buffer-Overflow-Cases/tree/gh-pages/files/bufferoverflowcases"> here</a>. </p>
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<a id="experiment" class="anchor" href="#experiment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Experiment</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>For each buffer overﬂow bug, the following steps are performed: First, we obtain the bug report from CVE. If the bug does not occur in open-source project, we will continue to another bug. Then, we get both the faulty and ﬁxed version of the bug from code repository of the corresponding open-source project. Second, we apply all the studied techniques to analyze the corresponding faulty version to ﬁnd the bugs that cannot be detected for each technique, i.e., false-negatives. In addition, we record the analysis time for each tool. Third, we apply all the studied techniques to analyze the corresponding ﬁxed version to ﬁnd the ﬁxed bugs that are still identiﬁed as bugs, i.e., false-positives. In addition, we record the analysis time for each tool. Finally,we perform qualitative analysis on each bug:(1)we record the detailed bug information (e.g., the API involved); (2)we categorize the manual ﬁx pattern for the bug. We repeat the steps for all the 100 studied bugs. </p>
+
+<p>You can find <a href="">a docx file</a> in which we briefly explain the reason why it is a buffer overflow bug for each bug, and <a href="">a xlsx file</a> where we record detailed information about each bug.</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
